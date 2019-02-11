@@ -25,8 +25,8 @@ cat <<EOFA
  Pkg.add("PyPlot")
  Pkg.add("Interact")
  Pkg.add("Plots")
- include("examples/rising_thermal_bubble.jl")
- rising_thermal_bubble()
+ include("examples/deep_convection_3d.jl")
+ deep_convection_3d()
 EOFA
 
 echo " "
