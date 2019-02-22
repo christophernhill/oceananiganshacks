@@ -15,5 +15,5 @@ RUN ( cd /home/jlab; export PATH="`pwd`/miniconda3/bin:$PATH"; /bin/bash -c "sou
 EXPOSE 8888
 
 ENV JROOT=/home/jlab
-ENV CGIT=https://github.com/ali-ramadhan/Oceananigans.jl.git
+ENV CGIT=https://github.com/climate-machine/Oceananigans.jl
 CMD ( cd ${JROOT} ; git clone ${CGIT}; export PATH="`pwd`/miniconda3/bin:$PATH"; /bin/bash -c "source activate myconda; cd Oceananigans.jl; jupyter lab --ip `hostname -I` --allow-root" )
