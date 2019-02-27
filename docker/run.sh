@@ -22,8 +22,6 @@ cat <<EOFA
  Pkg.activate(".")
  Pkg.instantiate()
  using Oceananigans
- Pkg.add("PyPlot")
- Pkg.add("Interact")
  Pkg.add("Plots")
  include("examples/deep_convection_3d.jl")
  deep_convection_3d()
