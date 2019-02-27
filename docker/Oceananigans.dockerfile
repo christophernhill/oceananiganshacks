@@ -5,7 +5,7 @@
 # FROM julia@sha256:c13bc0b99ab003de993078fdf70481bc0fd500ebf1d38968d89d32db6905a446
 FROM julia:latest
 
-RUN apt-get update && apt-get install -y gfortran mpich libmpich-dev less vim wget bzip2 procps git net-tools screen ffmpeg
+RUN apt-get update && apt-get install -y gfortran mpich libmpich-dev less vim wget bzip2 procps git net-tools screen ffmpeg hdf5-tools
 RUN mkdir -p /home/jlab
 RUN ( cd /home/jlab; wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh )
 RUN ( cd /home/jlab; chmod +x  ./Miniconda3-latest-Linux-x86_64.sh; ./Miniconda3-latest-Linux-x86_64.sh -b -p `pwd`/miniconda3 )
